@@ -138,7 +138,7 @@ def main():
         elif opcion == "2":
             listaEntrenador(entrenadores)
         elif opcion == "3":
-            borraPorPokemon(entrenadores)
+            borrarPorPokemon(entrenadores)
         elif opcion == "4":
             peleaPokemon(entrenadores)
         elif opcion == "5":
