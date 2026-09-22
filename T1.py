@@ -45,10 +45,19 @@ def borrarPorPokemon(tupla):
         mid = (higher + low)//2
         if(tupla[mid][3] == borrarEntrenador):
             idxPokemon = mid
+            break                      # ← sale del while apenas encuentra el valor
         elif(tupla[mid][3] < borrarEntrenador):
             low = mid
         else:
             higher = mid
+
+    # El while puede terminar sin revisar los dos extremos (low y higher):
+    # hay que chequearlos aparte o te vas a perder resultados válidos
+    if idxPokemon == -1:
+        if tupla[low][3] == borrarEntrenador:
+            idxPokemon = low
+        elif tupla[higher][3] == borrarEntrenador:
+            idxPokemon = higher
 
     if idxPokemon != -1:
         eliminado = tupla.pop(idxPokemon)
