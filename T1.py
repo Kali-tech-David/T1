@@ -66,7 +66,7 @@ def peleaPokemon(lista):
         print("No hay suficientes pokemones para pelear.\n")
         return
 
-        num1 = int(input("Ingrese el número del primer pokemon: "))
+    num1 = int(input("Ingrese el número del primer pokemon: "))
     num2 = int(input("Ingrese el número del segundo pokemon: "))
 
     if (num1 < 1 or num1 > len(lista) or num2 < 1 or num2 > len(lista) or num1 == num2):
@@ -94,7 +94,7 @@ def peleaPokemon(lista):
     vidaFinal1 = vida1 - danio2
     vidaFinal2 = vida2 - danio1
 
-    print(f"\n⚔  ¡COMBATE! {pokemon1} ({entrenador1}) VS {pokemon2} ({entrenador2})")
+    print(f"\n ¡COMBATE! {pokemon1} ({entrenador1}) VS {pokemon2} ({entrenador2})")
     print(f"{pokemon1} ataca: {ataque1} x {multiplicador1} = {danio1} de daño a {pokemon2}")
     print(f"{pokemon2} ataca: {ataque2} x {multiplicador2} = {danio2} de daño a {pokemon1}")
     print(f"Vida restante de {pokemon1}: {max(vidaFinal1, 0)}")
